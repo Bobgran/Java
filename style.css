@@ -1,0 +1,89 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.clear{
+    clear:both;
+}
+
+header{
+    min-height:10vh;
+    background: rgb(206, 196, 196);
+    padding: 2%;
+}
+
+header h2{
+    font-size: 2rem;
+    color:rgb(248, 95, 95);
+}
+
+#menuButton{
+    font-size: 55px;
+    cursor: pointer;
+    user-select: none;
+    float: right;
+}
+header nav ul li{
+    list-style-type:none;
+    width:100%;
+    padding:1%;
+    background:#303030;
+    font-size: 1.4em;
+}
+header nav ul li a{
+    color: #eee;
+    text-decoration: none;
+}
+
+.måns{
+    display:none;
+}
+
+main{
+    padding:1%;
+    min-height:70vh;
+
+}
+
+.mainContent{
+    min-height: 10vh;
+    border:1px solid blue;
+    width:100%;
+}
+
+footer{
+    min-height: 6vh;
+    background:#333;
+    color:white;
+    text-align: center;
+}
+
+@media(min-width:600px)
+{
+    #menuButton
+    {
+        display:none;
+    }
+    .måns{display:block;}
+
+    ul{display:flex;}
+
+    main{
+        
+        display:grid;
+        grid-gap:2px;
+        grid-template-areas: 
+        'one one  two two three three'
+        'one  one  four four four four '
+        'one one five five five five';
+    }
+    
+    .one{ grid-area:one; text-align: center;}
+    .two{ grid-area:two;}
+    .three{ grid-area:three;}
+    .four{ grid-area:four;}
+    .five{ grid-area:five;}
+}
